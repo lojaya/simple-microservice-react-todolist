@@ -1,0 +1,27 @@
+{
+  "name": "todolist-api-gateway",
+  "version": "0.1.0",
+  "description": "API gateway for simple todolist microservices",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "prod": "cross-env NODE_ENV=production nodemon ./bin/www"
+  },
+  "author": "Iksandi Lojaya <iksandi@lojaya.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-http-proxy": "^1.0.7",
+    "http-proxy-middleware": "^0.17.4",
+    "morgan": "~1.9.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.5",
+    "nodemon": "^1.12.1"
+  }
+}

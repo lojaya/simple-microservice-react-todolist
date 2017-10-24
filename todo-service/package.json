@@ -1,0 +1,25 @@
+{
+  "name": "todolist-todo-api",
+  "version": "0.1.0",
+  "description": "todolist todo api service",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "prod": "cross-env NODE_ENV=production nodemon ./bin/www"
+  },
+  "author": "Iksandi Lojaya <iksandi@lojaya.com>",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.130.0",
+    "body-parser": "~1.18.2",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "is-uuid": "^1.0.2",
+    "jsonwebtoken": "^8.1.0",
+    "morgan": "~1.9.0",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.5",
+    "nodemon": "^1.12.1"
+  }
+}

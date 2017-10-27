@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://api.coklat.co";
+const baseUrl = "http://localhost:3000/api";
 
 const authApi = {
   register: function(email, password, success, failed) {
@@ -20,7 +20,7 @@ const authApi = {
         }
       })
       .catch(error => {
-        failed(error.response);
+        failed(error.response.data);
       });
   },
 
@@ -41,7 +41,7 @@ const authApi = {
         }
       })
       .catch(error => {
-        failed(error.response);
+        failed(error.response.data);
       });
   },
 
@@ -59,7 +59,7 @@ const authApi = {
         }
       })
       .catch(error => {
-        failed(error.response);
+        failed(error.response.data);
       });
   }
 };
@@ -79,7 +79,7 @@ const todoApi = {
         }
       })
       .catch(error => {
-        failed(error.response);
+        failed(error.response.data);
       });
   },
 
@@ -98,7 +98,7 @@ const todoApi = {
         }
       })
       .catch(error => {
-        failed(error.response);
+        failed(error.response.data);
       });
   },
 
@@ -117,7 +117,7 @@ const todoApi = {
         }
       })
       .catch(error => {
-        failed(error.response);
+        failed(error.response.data);
       });
   },
 
@@ -136,7 +136,7 @@ const todoApi = {
         }
       })
       .catch(error => {
-        failed(error.response);
+        failed(error.response.data);
       });
   },
 
@@ -154,7 +154,7 @@ const todoApi = {
         }
       })
       .catch(error => {
-        failed(error.response);
+        failed(error.response.data);
       });
   },
 
@@ -173,7 +173,7 @@ const todoApi = {
         }
       })
       .catch(error => {
-        failed(error.response);
+        failed(error.response.data);
       });
   }
 };

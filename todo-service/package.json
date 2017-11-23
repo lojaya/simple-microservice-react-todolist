@@ -1,7 +1,7 @@
 {
-  "name": "todolist-todo-api",
+  "name": "todolist-todo-service",
   "version": "0.1.0",
-  "description": "todolist todo api service",
+  "description": "todolist todo CRUD api service",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
     "prod": "cross-env NODE_ENV=production nodemon ./bin/www"

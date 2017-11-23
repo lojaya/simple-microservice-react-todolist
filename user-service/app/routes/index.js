@@ -9,6 +9,11 @@ const applyRoutes = (app, routes) => {
 };
 
 module.exports = app => {
+  // required for AWS target group health check
+  app.get("/auth/healthCheck", function(req, res, next) {
+    res.status(200).json("OK");
+  });
+
   // apply all routes
   applyRoutes(app, routers);
 

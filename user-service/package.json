@@ -1,5 +1,5 @@
 {
-  "name": "todolist-user-api",
+  "name": "todolist-user-service",
   "version": "0.1.0",
   "description": "todolist user authentication api service",
   "scripts": {

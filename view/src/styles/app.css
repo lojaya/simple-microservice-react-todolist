@@ -69,7 +69,7 @@ input[type="checkbox"] {
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1); }
   .todoapp input.new-todo {
-    padding: 16px 16px 16px 60px;
+    padding: 16px 90px 16px 60px;
     border: none;
     background: rgba(0, 0, 0, 0.003);
     box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03); }
@@ -85,6 +85,19 @@ input[type="checkbox"] {
     font-style: italic;
     font-weight: 300;
     color: #e6e6e6; }
+  .todoapp .new-todo-submit {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    background: #e1e1e1;
+    color: #555;
+    border: 0;
+    height: 35px;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .todoapp .new-todo-submit:hover {
+      background: #555;
+      color: #fff; }
   .todoapp .new-todo {
     position: relative;
     margin: 0;
@@ -116,12 +129,12 @@ input[type="checkbox"] {
       text-align: center;
       border: none;
       /* Mobile Safari */ }
-      .todoapp .main .toggle-all:before {
+      .todoapp .main .toggle-all:after {
         content: "❯";
         font-size: 22px;
         color: #e6e6e6;
         padding: 10px 27px 10px 27px; }
-      .todoapp .main .toggle-all:checked:before {
+      .todoapp .main .toggle-all:checked:after {
         color: #737373; }
 
 .todo-list {
@@ -177,9 +190,9 @@ input[type="checkbox"] {
       -webkit-appearance: none;
       appearance: none; }
       .todo-list li .toggle:after {
-        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>'); }
+        content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iLTEwIC0xOCAxMDAgMTM1Ij48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWRlZGVkIiBzdHJva2Utd2lkdGg9IjMiLz48L3N2Zz4="); }
       .todo-list li .toggle:checked:after {
-        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>'); }
+        content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iLTEwIC0xOCAxMDAgMTM1Ij48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmRkYWQ1IiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBmaWxsPSIjNWRjMmFmIiBkPSJNNzIgMjVMNDIgNzEgMjcgNTZsLTQgNCAyMCAyMCAzNC01MnoiLz48L3N2Zz4="); }
     .todo-list li label {
       white-space: pre-line;
       word-break: break-all;
@@ -391,16 +404,16 @@ input[type="checkbox"] {
     transform: scale(1);
     -webkit-transform: scale(1); } }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .todo-list li .toggle {
-    height: 40px;
-    background: none; }
-  .toggle-all {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    -webkit-appearance: none;
-    appearance: none;
-    background: none; } }
+.todo-list li .toggle {
+  height: 40px;
+  background: none; }
+
+.toggle-all {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-appearance: none;
+  appearance: none;
+  background: none; }
 
 @media (max-width: 430px) {
   .footer {

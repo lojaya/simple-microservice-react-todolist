@@ -1,0 +1,15 @@
+# Base image definition
+FROM node:alpine
+
+#ENV auth /usr/local/auth
+# Copy source code into image
+WORKDIR /usr/local/view
+
+# Copy source code into image
+COPY ./view-service/build .
+
+RUN npm i -g serve
+
+EXPOSE 8080
+
+CMD ["serve", "-p", "8080"]

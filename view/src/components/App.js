@@ -80,13 +80,7 @@ class TodoApp extends Component {
     });
   };
 
-  handleNewTodoKeyDown = event => {
-    if (event.keyCode !== 13) {
-      return;
-    }
-
-    event.preventDefault();
-
+  handleNewTodo = event => {
     const self = this;
     const newValue = this.state.newTodo.trim();
 
@@ -112,6 +106,18 @@ class TodoApp extends Component {
         }
       );
     }
+  };
+
+  handleNewTodoClick = event => {
+    this.handleNewTodo(event);
+  };
+
+  handleNewTodoKeyDown = event => {
+    if (event.keyCode !== 13) {
+      return;
+    }
+
+    this.handleNewTodo(event);
   };
 
   toggleAll = event => {
@@ -371,6 +377,12 @@ class TodoApp extends Component {
               onKeyDown={this.handleNewTodoKeyDown}
               onChange={this.handleChange}
               autoFocus={false}
+            />
+            <input
+              className="new-todo-submit"
+              type="submit"
+              value="submit"
+              onClick={this.handleNewTodoClick}
             />
           </header>
           {main}
